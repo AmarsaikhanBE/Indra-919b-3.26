@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Давталт Four Number</title>
+	<style>
+	.container{
+		display:grid;
+		grid-template-columns:repeat(6,auto);
+		gap:10px;
+	}
+	.container div{
+		border:1px solid #000;
+		border-radius:5px;
+		padding:5px;
+		text-align:center;
+		align-content:center;
+		font-weight:900;
+		font-family:sans serif;
+	}
+	</style>
+</head>
+<body>
+	<div class='container'></div>
+<script>
+	let a = "";
+	let b = "";
+	let c= "";
+	let d= "";
+
+	do {
+		a=Math.round(Number(prompt("0-ээс ялгаатай 1 оронтой тоо оруулна уу.")));
+}
+	while (isNaN(a) || a > 9 || a < 1);  
+
+	alert("a = " + a);
+
+	do {
+		b=Math.round(Number(prompt("Өмнөх тооноос ялгаатай 1 оронтой тоо оруулна уу.")));
+}
+	while (isNaN(b) || b > 9 || b < 0 || b == a);
+
+	alert("b = " + b);
+
+	do {
+		c=Math.round(Number(prompt("Өмнөх 2 тооноос ялгаатай 1 оронтой тоо оруулна уу.")));
+}
+	while (isNaN(c) || c > 9 || c < 0 || c == a || c == b);
+
+	alert("c = " + c);
+
+do {
+  d=Math.round(Number(prompt("Өмнөх 3 тооноос ялгаатай 1 оронтой тоо оруулна уу.")));
+}
+while (isNaN(d) || d > 9 || d < 0 || d == a || d == b || d == c);
+
+const checked = [];
+
+for(let i = 1023; i <= 9876; i++){
+	const num = i.toString();
+	if(Number(num[0]) == a || Number(num[0]) == b || Number(num[0]) == c || Number(num[0]) == d){
+		if(Number(num[0]) != Number(num[1])){
+			if(Number(num[1]) == a || Number(num[1]) == b || Number(num[1]) == c || Number(num[1]) == d){
+				if(Number(num[0]) != Number(num[2]) && Number(num[1]) != Number(num[2])){
+					if(Number(num[2]) == a || Number(num[2]) == b || Number(num[2]) == c || Number(num[2]) == d){
+						if(Number(num[0]) != Number(num[3]) && Number(num[1]) != Number(num[3]) && Number(num[2]) != Number(num[3])){
+							if(Number(num[3]) == a || Number(num[3]) == b ||Number(num[3]) == c ||Number(num[3]) == d){
+								checked.push(num);
+};
+};
+};
+};
+};
+};
+};
+};
+
+for(let i = 0; i < checked.length; i++){
+	const createDiv = document.createElement('div');
+	createDiv.textContent=checked[i];
+	document.querySelector(".container").appendChild(createDiv);
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Давталт FizzBuzz</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(10, auto);
+            grid-template-rows: repeat(10, auto);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+    <script>
+        for (let i = 1; i <= 100; i++) {
+            const paragraph = document.createElement('p')
+            if (i % 3 == 0 && i % 5 == 0)
+                paragraph.textContent = "FizzBuzz"
+            else if (i % 3 == 0)
+                paragraph.textContent = 'Fizz'
+            else if (i % 5 == 0)
+                paragraph.textContent = 'Buzz'
+            else
+                paragraph.textContent = i
+            document.querySelector('.container').appendChild(paragraph)
+        }
+    </script>
+
+</body>
+
+</html>

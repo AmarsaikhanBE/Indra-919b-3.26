@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Давталт Century</title>
+</head>
+
+<body>
+    <script>
+        const enterYear = Number(prompt('Enter the yaer'))
+        let year = 0
+        let century = 0
+        for (let i = 0; i < enterYear; i += 100) {
+            century++
+        }
+        alert('Year: ' + enterYear + '\nCentury: ' + century)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Давталт Deposit</title>
+</head>
+
+<body>
+    <script>
+        let deposit = Number(prompt('Deposit'));
+        const rateMonth = Number(prompt('Rate monthly')) / 100;
+        const threshold = Number(prompt('Threshold'));
+        let year = 0
+        while (deposit < threshold) {
+            year++
+            for (let i = 1; i <= 12; i++)
+                deposit += deposit * rateMonth
+            console.log(deposit)
+            console.log(year)
+        }
+        alert(year + 'year')
+    </script>
+
+</body>
+
+</html>

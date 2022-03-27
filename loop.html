@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Давталт promt</title>
+</head>
+
+<body>
+    <script>
+        const numbers = []
+        let counter = 0
+        let sum = 0
+        let min
+        let max
+        for (let i = 0; i < Infinity; i++) {
+            x = Number(prompt('Enter number'))
+            if (x != '' && !isNaN(x)) {
+                numbers[i] = x
+                sum += Number(numbers[i])
+                alert('Sum: ' + sum)
+                console.log(numbers[i])
+                counter++
+                if (x < min || min == undefined) {
+                    min = x
+                }
+                if (x > max || max == undefined) {
+                    max = x
+                }
+                // alert("Min: " + Math.min.apply(Math, numbers) + '\nMax: ' + Math.max(...numbers))
+                alert("Min: " + min + '\nMax: ' + max)
+                alert('Average: ' + (sum / counter).toFixed(2))
+            } else {
+                alert('Enter only number')
+            }
+        }
+    </script>
+
+</body>
+
+</html>
